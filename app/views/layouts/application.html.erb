@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My To Do App</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <% flash.each do |name, msg| %>
+      <ul>
+        <li><%=  msg %></li>
+      </ul>
+    <% end %>
+    <%= yield %>
+  </body>
+  <footer>
+    <center><h5>Copyright © 2017 by Michael B. Peay</h5></center>
+  </footer>
+</html>
